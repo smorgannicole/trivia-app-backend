@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  resources :quiz_attempts
-  resources :trivia_questions
-  resources :trivia_categories
   devise_for :users,
     path: '',
     path_names: {
@@ -13,4 +10,10 @@ Rails.application.routes.draw do
       sessions: 'users/sessions',
       registrations: 'users/registrations'
     }
+
+  resources :trivia_categories
+  resources :trivia_questions
+  resources :quiz_attempts
+  resources :leaderboards
+
 end
