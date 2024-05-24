@@ -1,0 +1,2 @@
+class TriviaCategory < ApplicationRecord
+end

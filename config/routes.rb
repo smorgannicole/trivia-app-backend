@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :quiz_attempts
+  resources :trivia_questions
+  resources :trivia_categories
   devise_for :users,
     path: '',
     path_names: {
