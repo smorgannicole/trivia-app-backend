@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_24_223006) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_24_231526) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -48,6 +48,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_05_24_223006) do
     t.bigint "trivia_category_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "difficulty"
+    t.string "question_type"
     t.index ["trivia_category_id"], name: "index_trivia_questions_on_trivia_category_id"
   end
 

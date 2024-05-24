@@ -10,4 +10,10 @@ class TriviaQuestionsController < ApplicationController
     question = TriviaQuestion.find(params[:id])
     render json: question
   end
+
+  private
+
+  def trivia_question_params
+    params.require(:trivia_question).permit(:content, :answer, :difficulty, :question_type)
+  end
 end
